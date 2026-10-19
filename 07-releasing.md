@@ -120,7 +120,7 @@ The tap is updated by a pull request, opened automatically:
 1. The release workflow only drafts the release. A maintainer checks the draft and **publishes** it.
 2. Publishing runs `.github/workflows/homebrew.yml` in `knode`, which sends a `knode-release`
    `repository_dispatch` with the version to `knodemd/homebrew-tap`. Pre-releases are skipped.
-3. The `bump` workflow in the tap downloads the release's `SHA256SUMS`, sets `version` and every
+3. The `bump` workflow in the tap downloads the release's `SHA256SUMS`, sets the version and every
    `sha256` in the formula and the cask with `scripts/bump.py`, runs `brew style` and
    `brew audit`, installs and tests the formula on macOS and Linux and the cask on macOS, and opens
    a pull request. It never pushes to `main`. While the release has no `.dmg`, the cask is left as
