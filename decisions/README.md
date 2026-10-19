@@ -11,3 +11,4 @@ One file per important decision: `NNNN-short-title.md`, with **Context**, **Deci
 | [0004](0004-product.md) | What Knode is: a second brain for AI agents | Accepted |
 | [0005](0005-architecture.md) | Architecture: Rust core, .knode package, Knode Service, Loro sync | Accepted |
 | [0006](0006-markdown.md) | Every node is Markdown | Accepted |
+| [0007](0007-distribution.md) | How Knode is installed | Accepted |
