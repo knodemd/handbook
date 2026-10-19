@@ -22,7 +22,8 @@ copyright, and say plainly under what terms contributions come in.
 - **Open code, reserved brand:** the code and the docs are for everyone; the brand is not. The kit
   stays public so anyone can read it, use the logo to talk about Knode and contribute to Knode,
   but using the brand or the typefaces anywhere else needs written permission. Forks keep the
-  code and bring their own name, logo and typefaces.
+  code and bring their own name, logo and typefaces, and keep crediting Knode: Apache 2.0
+  requires every copy to carry the `NOTICE`, "Knode, a project by aaangelmartin".
 
 ## Consequences
 
