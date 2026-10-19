@@ -1,6 +1,6 @@
-# 0001 · Open source and built in public from day one
+# 0001 - Open source and built in public from day one
 
-**Status:** accepted · 2026-10-19
+**Status:** accepted, 2026-10-19
 
 ## Context
 

@@ -1,6 +1,6 @@
-# 0002 · The Knode brand identity
+# 0002 - The Knode brand identity
 
-**Status:** accepted · 2026-10-19
+**Status:** accepted, 2026-10-19
 
 ## Context
 

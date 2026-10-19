@@ -1,4 +1,4 @@
-# 5 · Brand
+# 5 - Brand
 
 Everything is in [knodemd/brand](https://github.com/knodemd/brand), generated from one source
 file (`Source/brand.json`), with full guidelines in `01 Brand Guidelines`.
@@ -13,9 +13,9 @@ joined by a bridge: two connected ideas.
 
 | | |
 |---|---|
-| Logo | Four forms: horizontal, stacked, symbol (the K), wordmark (KNODE) · transparent or on a background |
-| Colour | Ink `#0B0B14` · Paper `#F3F2EE` · Indigo `#818CF8` · nothing else, no gradients |
-| Type | Knode Block (display) · Knode Line (labels) · Geist (text) · Geist Mono (technical) |
+| Logo | Four forms: horizontal, stacked, symbol (the K), wordmark (KNODE), transparent or on a background |
+| Colour | Ink `#0B0B14`, Paper `#F3F2EE`, Indigo `#818CF8`, nothing else, no gradients |
+| Type | Knode Block (display), Knode Line (labels), Geist (text), Geist Mono (technical) |
 | Icons | 63, on a 7 × 7 grid with a one-cell stroke |
 | Voice | Clear, yours, calm. English first. |
 | Tagline | Connect your thoughts. Naturally. |

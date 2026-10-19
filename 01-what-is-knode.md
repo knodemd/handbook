@@ -1,4 +1,4 @@
-# 1 · What Knode is
+# 1 - What Knode is
 
 Knode turns your notes and your AI conversations into a **map of knowledge**: every idea is a
 node, and nodes link to each other. The map is **yours**, saved in an open `.knode` file you can

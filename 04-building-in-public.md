@@ -1,4 +1,4 @@
-# 4 · Building in public
+# 4 - Building in public
 
 Knode is open source and built in public from the first commit: the code, the issues, the
 roadmap and the decisions are visible to everyone.
