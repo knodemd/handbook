@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/knodemd/brand/main/09%20Banners/Repository%20Previews/PNG/repo-preview-handbook.png" alt="Knode handbook" width="100%">
+<img src="https://raw.githubusercontent.com/knodemd/brand/main/09%20Banners/README%20Headers/PNG/readme-handbook.png" alt="Knode handbook" width="100%">
 
 # Knode Handbook
 
