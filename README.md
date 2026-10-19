@@ -15,6 +15,7 @@ work, and how to use the brand. If something about the project isn't written her
 | 4 | [Building in public](04-building-in-public.md): what is public, and what never goes in a repo |
 | 5 | [Brand](05-brand.md): how the brand works and where to find everything |
 | 6 | [Roadmap](06-roadmap.md): where we are and what comes next |
+| 7 | [Releasing](07-releasing.md): versions, the changelog, signing, and publishing a release |
 | | [Decisions](decisions/): the log of important decisions and why we made them |
 
 New here? Read chapters 1 and 3, then pick a `good first issue`.

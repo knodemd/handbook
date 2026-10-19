@@ -45,7 +45,8 @@ Small, logical commits; one change per commit.
 ## Releases
 
 [Semantic versioning](https://semver.org). Every release has notes written for people, not a list of commits.
-User-facing changes are recorded in the changelog as they land.
+User-facing changes are recorded in the changelog as they land. How a release is cut, signed and
+published is in [Releasing](07-releasing.md).
 
 ## Decisions
 
