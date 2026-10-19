@@ -9,12 +9,12 @@ Everything lives in the [`knodemd`](https://github.com/knodemd) organisation, an
 | [`brand`](https://github.com/knodemd/brand) | The brand kit, generated from one source file | Active |
 | [`brand-license`](https://github.com/knodemd/brand-license) | The Knode Brand License and the trademark policy | Active |
 | [`web`](https://github.com/knodemd/web) | knode.md: the website, with the developers, brand and licenses pages | Active |
-| `knode` | The product: Rust core, Mac, iPhone and web apps | Planned, v0.1 |
-| `format` | The `.knode` specification and example files | Planned, v0.1 |
-| `homebrew-tap` | `brew install knodemd/tap/knode` | Planned, v0.1 |
+| [`knode`](https://github.com/knodemd/knode) | The product: Rust core, Mac, iPhone and web apps | Active |
+| [`format`](https://github.com/knodemd/format) | The `.knode` specification and example files | Active |
+| [`homebrew-tap`](https://github.com/knodemd/homebrew-tap) | `brew install knodemd/tap/knode` | Active |
 | `cloud` | Knode Cloud: sync, accounts, sharing, teams | Planned, v0.4 |
 
-New repositories are added here when they're created, never before.
+New repositories are added here when they're created, and to `map/repos.yml` in `.github`, which draws the map on the [organisation profile](https://github.com/knodemd).
 
 ## Naming
 
