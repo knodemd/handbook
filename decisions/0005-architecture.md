@@ -28,12 +28,20 @@ instantly, sync it across devices and teams later, and run natively on each plat
 
 ## Repositories
 
-`core` (Rust workspace: `knode-format`, `knode-md`, `knode-ingest`, `knode-service`, `knode-mcp`,
-`knode-cli`, `knode-sync`, `knode-ffi`), `format` (the specification), `swift` (the core as a Swift
-package), `mac`, `ios`, `cloud` and `homebrew-tap`. Each crate is published on its own, so the
-library and the converter can be used without the rest.
+One product, so everything that ships together lives in one repository:
+
+- `knode`: the product. `core/` (the Rust workspace: format library, Markdown converter, capture,
+  service, MCP server, CLI, sync and the bindings), `mac/`, `ios/`, `web/` (app.knode.md), and later
+  `android/` and `windows/`, with `brand` as a git submodule and the product docs in `docs/`.
+- `format`: the open `.knode` specification and example files, for anyone implementing it.
+- `cloud`: Knode Cloud, deployed and versioned on its own; it uses the crates of `knode/core`.
+- `homebrew-tap`: required by Homebrew.
+
+The library and the converter are published on their own from `knode/core` (crates.io, a Swift
+package, npm). A contributor who only works on one app clones just `core/` and that app with a sparse
+checkout. If platform teams ever appear, splitting is easy; joining later is not.
 
 ## Consequences
 
-- One change to the format is one pull request across the library, the converter and the server.
+- One change to the core and the apps is one pull request.
 - Other platforms and languages get their own repository on top of `core` when they are needed.
