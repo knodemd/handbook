@@ -29,5 +29,5 @@ APIs, MCP, SDKs and docs. They never mix in one piece.
 ## Using it
 
 - Find the right file with the *Find it fast* table in the brand repo's README.
-- The files are CC BY 4.0 and the typefaces SIL OFL 1.1; the name and logo follow the [trademark policy](https://github.com/knodemd/brand/blob/main/TRADEMARK.md).
+- The files are CC BY 4.0, the typefaces SIL OFL 1.1 and the code Apache 2.0; the name and logo follow the [trademark policy](https://github.com/knodemd/brand/blob/main/TRADEMARK.md).
 - Need something the kit doesn't have? Open an issue in `brand` with the `type: design` label.
