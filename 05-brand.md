@@ -29,5 +29,5 @@ APIs, MCP, SDKs and docs. They never mix in one piece.
 ## Using it
 
 - Find the right file with the *Find it fast* table in the brand repo's README.
-- The brand files and the Knode typefaces are reserved under the [Knode Brand Licence](https://github.com/knodemd/brand/blob/main/BRAND-LICENSE.md) and the code is Apache 2.0; the name and logo also follow the [trademark policy](https://github.com/knodemd/brand/blob/main/TRADEMARK.md).
+- The brand (names, logo, icons and the Knode typefaces) is reserved under the [Knode Brand License](https://github.com/knodemd/brand-license); everything else is Apache 2.0.
 - Need something the kit doesn't have? Open an issue in `brand` with the `type: design` label.

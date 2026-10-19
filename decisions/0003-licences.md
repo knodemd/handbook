@@ -4,31 +4,31 @@
 
 ## Context
 
-Code had been published under MIT by default, without a decision. Knode will take outside
-contributions and may be built on by companies, so the licence should cover patents as well as
-copyright, and say plainly under what terms contributions come in.
+Knode wants as many people as possible to use it, change it and build on it, while nobody else can
+present themselves as Knode. For a new project the real risk is being unknown, not being copied, and
+what protects it from copies is the brand and being the official, maintained version, not a
+restrictive licence. Fewer licences are also easier to understand.
 
 ## Decision
 
+Two licences, nothing else.
+
 | What | Licence |
 |---|---|
-| Code: apps, CLI, SDKs, websites, generators | [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) |
-| Docs: this handbook, the community files, the `.knode` specification | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
-| The brand: name, logo, app icon, Knode Block and Knode Line, icons, graphic elements, templates, guidelines | [Knode Brand Licence](https://github.com/knodemd/brand/blob/main/BRAND-LICENSE.md): all rights reserved, with the permissions it lists |
+| Everything in the repositories: code, docs, the `.knode` format and its libraries | [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) |
+| The brand: the names Knode and .knode, logo, app icon, icons, Knode Block and Knode Line | [Knode Brand License](https://github.com/knodemd/brand-license), all rights reserved |
 
-- **Apache 2.0 rather than MIT:** it is just as permissive, and adds an explicit patent grant from
-  every contributor, a patent-retaliation clause, and a clear rule that contributions are licensed
-  under the same terms (section 5). It is the licence of Swift and of most large open-source projects.
-- **Open code, reserved brand:** the code and the docs are for everyone; the brand is not. The kit
-  stays public so anyone can read it, use the logo to talk about Knode and contribute to Knode,
-  but using the brand or the typefaces anywhere else needs written permission. Forks keep the
-  code and bring their own name, logo and typefaces, and keep crediting Knode: Apache 2.0
-  requires every copy to carry the `NOTICE`, "Knode, a project by aaangelmartin".
+- **Apache 2.0 rather than MIT:** just as free, and better for us. Every copy must keep the `NOTICE`
+  ("Knode, a project by aaangelmartin") and mark what it changed; it grants patents from every
+  contributor; and it says outright that it gives no rights to the name or logo.
+- **Rather than AGPL or MPL:** they would force forks to publish their changes, but they put off
+  companies and contributors and complicate the App Store. Visibility matters more now.
+- **No CLA:** with Apache 2.0, contributions come in under the same licence (section 5), which is
+  enough to ship Knode anywhere, the App Store included.
 
 ## Consequences
 
-- Code repositories carry the Apache 2.0 text in `LICENSE` and a `NOTICE` file; docs repositories
-  carry CC BY 4.0. Wherever brand files ship with code (fonts, icons), the `NOTICE` says they
-  follow the Knode Brand Licence.
-- Contributions follow the licence of the repository they go to (see `CONTRIBUTING.md`).
-- Supersedes MIT in `knodemd/web` and `knodemd/.github`, and CC BY 4.0 and OFL for the brand.
+- Every repository has the Apache 2.0 text in `LICENSE` and a `NOTICE` crediting Knode.
+- Brand files (logo, icons, fonts) carry the Knode Brand License wherever they ship.
+- A fork may use, change and even sell the code, but under its own name and logo, crediting Knode.
+- Supersedes the MIT licence of `web` and `.github`, and CC BY 4.0 and OFL for the brand and docs.

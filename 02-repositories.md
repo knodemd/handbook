@@ -21,6 +21,6 @@ New repositories are added here when they're created, never before.
 ## Every repository has
 
 - A `README.md` that says what it is, how to run it and how to test it.
-- A licence file from the first commit: Apache 2.0 for code, CC BY 4.0 for docs (see [decision 0003](decisions/0003-licences.md)).
+- A `LICENSE` (Apache 2.0) and a `NOTICE` crediting Knode, from the first commit (see [decision 0003](decisions/0003-licences.md)).
 - Issues enabled, with the shared labels (see [How we work](03-how-we-work.md)).
 - Community files inherited from `.github` (contributing, code of conduct, security, templates).

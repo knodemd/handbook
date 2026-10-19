@@ -8,7 +8,7 @@ roadmap and the decisions are visible to everyone.
 - All repositories, from creation.
 - Issues, pull requests, milestones and discussions.
 - The decision log and the roadmap.
-- The brand kit, public to read and to contribute to, but reserved: see the Knode Brand Licence.
+- The brand kit, public to read and to contribute to; the brand itself is reserved (Knode Brand License).
 
 ## Never in a repository
 

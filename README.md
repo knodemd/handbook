@@ -17,4 +17,4 @@ work, and how to use the brand. If something about the project isn't written her
 
 New here? Read chapters 1 and 3, then pick a `good first issue`.
 
-Licensed under [CC BY 4.0](LICENSE.md).
+Licensed under [Apache 2.0](LICENSE).
