@@ -1,4 +1,4 @@
-# 3 · How we work
+# 3 - How we work
 
 ## Issues first
 
@@ -9,10 +9,10 @@ Every issue has a **type**, a **size**, an **assignee** once someone takes it, a
 
 | Labels | Meaning |
 |---|---|
-| `type: feature` · `type: bug` · `type: task` · `type: docs` · `type: design` | What kind of work it is |
-| `size: S` · `size: M` · `size: L` | Under a day · a few days · a week or more |
-| `status: in-progress` · `status: needs-review` · `status: blocked` | Where it is now |
-| `good first issue` · `help wanted` | Good entry points for contributors |
+| `type: feature`, `type: bug`, `type: task`, `type: docs`, `type: design` | What kind of work it is |
+| `size: S`, `size: M`, `size: L` | Under a day, a few days, a week or more |
+| `status: in-progress`, `status: needs-review`, `status: blocked` | Where it is now |
+| `good first issue`, `help wanted` | Good entry points for contributors |
 
 Keep the issue current: mark it in progress and comment the branch name when you start, tick
 the boxes as they're met, and comment on blockers or changes of plan.
