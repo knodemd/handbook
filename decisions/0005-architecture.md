@@ -17,7 +17,8 @@ instantly, sync it across devices and teams later, and run natively on each plat
     permissions, full-text search (FTS5) and local semantic search (sqlite-vec);
   - `blobs/`: attachments by hash;
   - `sync/`: changes as Loro (CRDT) updates.
-- **The app works only with `.knode`.** Markdown goes in and out by conversion, in both directions.
+- **The app works only with `.knode`.** The text of each node is Markdown, and a space can also be
+  mirrored as a folder of `.md` files ([decision 0006](0006-markdown.md)).
 - **Knode Service** runs in the menu bar on the Mac and is the only process that opens a space. The
   app and the agents talk to it, so everyone writes at once and sees changes live; text edited by
   two at once merges with Loro, and history keeps every version.

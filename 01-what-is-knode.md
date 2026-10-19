@@ -9,8 +9,8 @@ can read and add to, and that you see and organise in a native app.
   comes out of each conversation, connected as nodes and links.
 - **Spaces with permissions.** Work and personal apart. Each space is a `.knode` file, and you decide
   which agent sees which space and whether it can write.
-- **Local and open.** In your files, on your Mac, in an open format. No AI inside the app: the AI is
-  the agent that connects to Knode.
+- **Local and open.** In your files, on your Mac, in an open format. Every node is Markdown. No AI
+  inside the app: the AI is the agent that connects to Knode.
 
 ## Principles
 
@@ -32,4 +32,5 @@ something they can see, search and keep. The first user is the person building i
 ## Where it stands
 
 Knode is in design and built in public. What comes next is in the [roadmap](06-roadmap.md); how it
-is built is in [decision 0005](decisions/0005-architecture.md).
+is built is in [decision 0005](decisions/0005-architecture.md) and
+[decision 0006](decisions/0006-markdown.md).

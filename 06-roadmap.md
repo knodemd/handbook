@@ -30,7 +30,8 @@ Done when: it is used for a week straight and Claude finds what was worked out d
 - **Folders:** which projects and folders feed each space; capture off per project.
 - **Permissions:** per agent and per space: read, write or nothing; each agent has its own key.
 - **Capture:** every agent: Gemini CLI, Cursor, Copilot CLI, OpenCode, Amp, Windsurf, Cline, Aider.
-- **Markdown:** `.knode` to Markdown and back; import an Obsidian vault.
+- **Markdown:** `.knode` to Markdown and back; import an Obsidian vault; an optional live folder of
+  `.md` files, written out from the space.
 - **History:** every change kept; undo, and see who changed what.
 
 Done when: a work agent sees nothing personal, and an Obsidian vault goes in and out unchanged.
@@ -42,6 +43,7 @@ Done when: a work agent sees nothing personal, and an Obsidian vault goes in and
 - **Import:** Claude, ChatGPT, Gemini and Perplexity exports; Apple Notes, Bear, Notion, Evernote;
   PDF, web pages, Kindle and Readwise.
 - **Together:** you and your agents editing one note at once, merged with Loro.
+- **Markdown folder both ways:** edits made in the live `.md` folder come back into the space.
 - **Attachments:** images, PDFs and files inside the space.
 
 Done when: everything already written comes in and is found by meaning, not by words.
