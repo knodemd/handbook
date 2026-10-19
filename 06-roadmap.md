@@ -7,9 +7,12 @@ each line below becomes an issue. Dates after v0.1 are set when the version befo
 
 Brand kit, handbook, licences, knode.md.
 
-## v0.1 - You use it - this week
+## v0.1 - You use it - built
 
 Knode working with Claude Code every day.
+
+**Status:** built and checked end to end with Claude Code. It waits for its first release: signing,
+notarisation and Homebrew ([knode#13](https://github.com/knodemd/knode/issues/13)).
 
 - **Format:** draft specification v0: the `.knode` package, `manifest.json`, tables for nodes, links
   and provenance, time-ordered ids (ULID), an example space.
@@ -26,6 +29,9 @@ Knode working with Claude Code every day.
 Done when: it is used for a week straight and Claude finds what was worked out days before.
 
 ## v0.2 - Spaces and permissions
+
+**Status:** in progress: change history and undo, Markdown export and import, live Markdown folder,
+more agents captured, and the specification for settings, folders and permissions are in.
 
 - **Spaces:** several `.knode` files, switched like Apple Music libraries; create, rename, icon.
 - **Folders:** which projects and folders feed each space; capture off per project.
