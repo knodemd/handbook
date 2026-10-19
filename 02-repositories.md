@@ -1,4 +1,4 @@
-# 2 · Repositories
+# 2 - Repositories
 
 Everything lives in the [`knodemd`](https://github.com/knodemd) organisation, and everything is public.
 
@@ -7,6 +7,9 @@ Everything lives in the [`knodemd`](https://github.com/knodemd) organisation, an
 | [`.github`](https://github.com/knodemd/.github) | Organisation profile and shared community files | Active |
 | [`handbook`](https://github.com/knodemd/handbook) | This handbook | Active |
 | [`brand`](https://github.com/knodemd/brand) | The brand kit, generated from one source file | Active |
+| [`brand-license`](https://github.com/knodemd/brand-license) | The Knode Brand License and the trademark policy | Active |
+| [`web`](https://github.com/knodemd/web) | knode.md: the website, with the developers, brand and licenses pages | Active |
+| [`developers`](https://github.com/knodemd/developers) | A draft developers site, kept for when there is real documentation | Parked |
 | `knode` | The app for macOS and iOS | Planned |
 | `format` | The `.knode` file format specification and test files | Planned |
 
