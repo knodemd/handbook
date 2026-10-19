@@ -19,8 +19,9 @@ Knode working with Claude Code every day.
 - **MCP:** search, read, write, link and recent; installed in Claude Code with one command.
 - **Capture:** every Claude Code and Codex conversation becomes a node, with its project and date.
 - **Mac app:** open a space, list nodes, read and edit a note, search.
-- **CLI:** `knode init`, `knode search`, `knode import`.
-- **Distribution:** Homebrew and a download from knode.md, signed and notarised.
+- **CLI:** `knode init`, `knode search`, `knode import`, `knode connect`; the MCP server is `knode mcp`.
+- **Distribution:** the `knode` binary with Homebrew; the Mac app with Homebrew and from knode.md,
+  signed and notarised, offering to install the `knode` command; every command on knode.md/install.
 
 Done when: it is used for a week straight and Claude finds what was worked out days before.
 
@@ -33,6 +34,7 @@ Done when: it is used for a week straight and Claude finds what was worked out d
 - **Markdown:** `.knode` to Markdown and back; import an Obsidian vault; an optional live folder of
   `.md` files, written out from the space.
 - **History:** every change kept; undo, and see who changed what.
+- **Linux:** the `knode` binary for Linux, with Homebrew and `install.sh`.
 
 Done when: a work agent sees nothing personal, and an Obsidian vault goes in and out unchanged.
 

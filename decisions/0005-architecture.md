@@ -25,7 +25,8 @@ instantly, sync it across devices and teams later, and run natively on each plat
 - **Sync never copies the database.** It exchanges Loro updates: through the user's private CloudKit
   database (iCloud, free), or through Knode Cloud (paid), whose server is open source and encrypted
   end to end.
-- **Installed on the Mac** with Homebrew or from knode.md; the iPhone app comes from the App Store.
+- **Installed on the Mac** with Homebrew or from knode.md; the iPhone app comes from the App Store
+  ([decision 0007](0007-distribution.md)).
 
 ## Repositories
 
