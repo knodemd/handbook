@@ -115,8 +115,28 @@ If a certificate or key leaks, revoke it at Apple first, then replace the secret
 - `Casks/knode.rb`: the Mac app, from `Knode-X.Y.Z.dmg`. It has no `binary` stanza, so it never links
   a second `knode` when the formula is installed.
 
-After the release is published, a pull request to the tap sets `version` and every `sha256` from
-`SHA256SUMS`. Before it is merged, it is tested on a Mac:
+The tap is updated by a pull request, opened automatically:
+
+1. The release workflow only drafts the release. A maintainer checks the draft and **publishes** it.
+2. Publishing runs `.github/workflows/homebrew.yml` in `knode`, which sends a `knode-release`
+   `repository_dispatch` with the version to `knodemd/homebrew-tap`. Pre-releases are skipped.
+3. The `bump` workflow in the tap downloads the release's `SHA256SUMS`, sets the version and every
+   `sha256` in the formula and the cask with `scripts/bump.py`, runs `brew style` and
+   `brew audit`, installs and tests the formula on macOS and Linux and the cask on macOS, and opens
+   a pull request. It never pushes to `main`. While the release has no `.dmg`, the cask is left as
+   it is.
+
+The dispatch needs one secret on the `knode` repository:
+
+| Secret | What it holds |
+|---|---|
+| `TAP_DISPATCH_TOKEN` | A fine-grained token with "Contents: read and write" on `knodemd/homebrew-tap` only |
+
+Without it, publishing still works and the workflow warns that the tap was not updated. Either way,
+the tap's `bump` workflow can be run by hand from its Actions tab with the version. The tap's
+repository must allow GitHub Actions to create pull requests.
+
+Before the pull request is merged, it is tested on a Mac:
 
 ```sh
 brew tap knodemd/tap
@@ -153,7 +173,7 @@ The release:
 
 After:
 
-- [ ] Tap pull request with the new version and checksums, tested, merged.
+- [ ] The tap's `bump` pull request is open (or the `bump` workflow was run by hand), tested, merged.
 - [ ] `brew upgrade knode` and `brew upgrade --cask knode` install the new version.
 - [ ] knode.md download and install page point at the new version.
 - [ ] The milestone is closed and the release is announced.
