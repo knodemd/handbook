@@ -9,8 +9,13 @@ Everything lives in the [`knodemd`](https://github.com/knodemd) organisation, an
 | [`brand`](https://github.com/knodemd/brand) | The brand kit, generated from one source file | Active |
 | [`brand-license`](https://github.com/knodemd/brand-license) | The Knode Brand License and the trademark policy | Active |
 | [`web`](https://github.com/knodemd/web) | knode.md: the website, with the developers, brand and licenses pages | Active |
-| `knode` | The app for macOS and iOS | Planned |
-| `format` | The `.knode` file format specification and test files | Planned |
+| `core` | The Rust core: format library, Markdown converter, capture, service, MCP server, CLI, sync | Planned, v0.1 |
+| `format` | The `.knode` specification and example files | Planned, v0.1 |
+| `swift` | The core as a Swift package | Planned, v0.1 |
+| `mac` | Knode for Mac, with Knode Service in the menu bar | Planned, v0.1 |
+| `homebrew-tap` | `brew install knodemd/tap/knode` | Planned, v0.1 |
+| `ios` | Knode for iPhone and iPad | Planned, v0.4 |
+| `cloud` | Knode Cloud: sync, accounts, sharing, teams | Planned, v0.4 |
 
 New repositories are added here when they're created, never before.
 
