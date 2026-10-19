@@ -12,3 +12,4 @@ One file per important decision: `NNNN-short-title.md`, with **Context**, **Deci
 | [0005](0005-architecture.md) | Architecture: Rust core, .knode package, Knode Service, Loro sync | Accepted |
 | [0006](0006-markdown.md) | Every node is Markdown | Accepted |
 | [0007](0007-distribution.md) | How Knode is installed | Accepted |
+| [0008](0008-permissions.md) | Permissions per agent and per space, with agent keys | Accepted |
