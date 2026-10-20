@@ -31,9 +31,9 @@ Done when: it is used for a week straight and Claude finds what was worked out d
 ## v0.2 - Spaces and permissions - built
 
 **Status:** built: several spaces, folders, permissions with agent keys, history and undo, Markdown
-out and back with Obsidian, a one-way live folder, every agent connected and all but Windsurf's
-Cascade captured, Linux builds and `install.sh`. Left: checks on real data (an Obsidian vault, real session files of each
-agent), Homebrew on Linux, and the release
+out and back with Obsidian, a live Markdown folder, every agent connected and all but Windsurf's
+Cascade captured, Linux builds and `install.sh`. Left: checks on real data (an Obsidian vault, real
+session files of each agent), Homebrew on Linux, and the release
 ([knode#68](https://github.com/knodemd/knode/issues/68)).
 
 - **Spaces:** several `.knode` files, switched like Apple Music libraries; create, rename, icon.
@@ -50,10 +50,11 @@ Done when: a work agent sees nothing personal, and an Obsidian vault goes in and
 ## v0.3 - Map and import - in progress
 
 **Status:** in: graph, canvas and typed links in the Mac app; attachments; editing together with
-Loro; search by meaning and hybrid search in Knode Service, MCP and the CLI; Claude, ChatGPT and
-Gemini exports in `knode import`; Apple Notes, Bear, Notion, Evernote, PDF, web, Kindle and Readwise
-read by the library. Left: search by meaning in the Mac app, those importers in `knode import` and
-the app, the Markdown folder both ways, a search evaluation on real queries, and the release
+Loro; search by meaning and hybrid search in the app, Knode Service, MCP and the CLI, on Linux arm64
+too; every importer in `knode import` (chat exports, Apple Notes, Bear, Notion, Evernote, PDF, web,
+Kindle, Readwise exports); the Markdown folder both ways. Left: the app asking about files deleted
+from the folder, Readwise through its API, checks against real exports and on a real space (search
+quality and speed), musl builds for Linux, and the release
 ([knode#69](https://github.com/knodemd/knode/issues/69)).
 
 - **Map:** graph and canvas with saved positions; typed links and backlinks.
