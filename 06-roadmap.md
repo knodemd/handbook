@@ -28,10 +28,13 @@ notarisation and Homebrew ([knode#13](https://github.com/knodemd/knode/issues/13
 
 Done when: it is used for a week straight and Claude finds what was worked out days before.
 
-## v0.2 - Spaces and permissions
+## v0.2 - Spaces and permissions - built
 
-**Status:** in progress: change history and undo, Markdown export and import, live Markdown folder,
-more agents captured, and the specification for settings, folders and permissions are in.
+**Status:** built: several spaces, folders, permissions with agent keys, history and undo, Markdown
+out and back with Obsidian, a one-way live folder, every agent connected and all but Windsurf's
+Cascade captured, Linux builds and `install.sh`. Left: checks on real data (an Obsidian vault, real session files of each
+agent), Homebrew on Linux, and the release
+([knode#68](https://github.com/knodemd/knode/issues/68)).
 
 - **Spaces:** several `.knode` files, switched like Apple Music libraries; create, rename, icon.
 - **Folders:** which projects and folders feed each space; capture off per project.
@@ -44,7 +47,14 @@ more agents captured, and the specification for settings, folders and permission
 
 Done when: a work agent sees nothing personal, and an Obsidian vault goes in and out unchanged.
 
-## v0.3 - Map and import
+## v0.3 - Map and import - in progress
+
+**Status:** in: graph, canvas and typed links in the Mac app; attachments; editing together with
+Loro; search by meaning and hybrid search in Knode Service, MCP and the CLI; Claude, ChatGPT and
+Gemini exports in `knode import`; Apple Notes, Bear, Notion, Evernote, PDF, web, Kindle and Readwise
+read by the library. Left: search by meaning in the Mac app, those importers in `knode import` and
+the app, the Markdown folder both ways, a search evaluation on real queries, and the release
+([knode#69](https://github.com/knodemd/knode/issues/69)).
 
 - **Map:** graph and canvas with saved positions; typed links and backlinks.
 - **Search:** local semantic search (a small model and sqlite-vec) and hybrid search for agents.
