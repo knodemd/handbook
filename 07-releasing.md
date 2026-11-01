@@ -73,8 +73,22 @@ Pushing a tag runs `.github/workflows/release.yml` in the `knode` repository:
 The release stays a **draft** until a maintainer has checked it and publishes it by hand. Nothing is
 published automatically.
 
-The Mac app joins the workflow when it ships: the app is archived with Xcode, signed, notarised,
-stapled and attached as `Knode-X.Y.Z.dmg`, with its checksum in `SHA256SUMS`.
+The Mac job uses macOS 26 and checks out the brand submodule. All six signing and notarisation
+secrets below must be present before it builds: it fails instead of preparing an unsigned public
+Mac release. No secret value is printed.
+
+The same job builds a universal Release app with Xcode, sets its marketing version from the tag
+and its build number from the workflow run, and embeds the `knode` command. It notarises and
+staples the app, and checks it with Gatekeeper. `mac/scripts/package-app.sh` verifies the app and
+helper versions, both architectures, Developer ID signature and stapled ticket, then creates
+`Knode-X.Y.Z.dmg` with an Applications link, LICENSE and NOTICE. The workflow signs, notarises and
+staples the DMG too, and computes the checksum **after** its final modification. The image and its
+`.sha256` are attached to the draft, and `SHA256SUMS` covers every archive and the DMG.
+
+The local `--allow-adhoc` packaging check is described in the product's `mac/README.md`. It does
+not install or launch the app and never runs in the public release workflow. The Developer ID,
+notarisation and Gatekeeper steps still need checking with the project's real credentials before
+the first release can be published.
 
 ## Signing and notarisation
 
