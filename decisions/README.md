@@ -13,3 +13,4 @@ One file per important decision: `NNNN-short-title.md`, with **Context**, **Deci
 | [0006](0006-markdown.md) | Every node is Markdown | Accepted |
 | [0007](0007-distribution.md) | How Knode is installed | Accepted |
 | [0008](0008-permissions.md) | Permissions per agent and per space, with agent keys | Accepted |
+| [0009](0009-projects.md) | Projects, and how an import becomes one | Proposed |
