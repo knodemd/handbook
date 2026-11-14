@@ -61,6 +61,8 @@ quality and speed), musl builds for Linux, and the release
 - **Search:** local semantic search (a small model and sqlite-vec) and hybrid search for agents.
 - **Import:** Claude, ChatGPT, Gemini and Perplexity exports; Apple Notes, Bear, Notion, Evernote;
   PDF, web pages, Kindle and Readwise.
+- **Import chats and mail:** WhatsApp ([knode#222](https://github.com/knodemd/knode/issues/222)), Telegram Desktop ([knode#223](https://github.com/knodemd/knode/issues/223)) and Slack workspace
+  ([knode#224](https://github.com/knodemd/knode/issues/224)) exports; Gmail through Google Takeout and Apple Mail ([knode#225](https://github.com/knodemd/knode/issues/225)).
 - **Together:** you and your agents editing one note at once, merged with Loro.
 - **Markdown folder both ways:** edits made in the live `.md` folder come back into the space.
 - **Attachments:** images, PDFs and files inside the space.
@@ -73,6 +75,8 @@ Done when: everything already written comes in and is found by meaning, not by w
 - **iCloud:** free, through CloudKit, for Mac, iPhone and iPad.
 - **Knode Cloud:** a Rust server with accounts, sync and end-to-end encryption (`cloud`).
 - **iPhone and iPad:** read, search and edit; save from the share sheet.
+- **In-person meetings:** record on the iPhone into a space, with the same consent rules as on the
+  Mac ([knode#240](https://github.com/knodemd/knode/issues/240)).
 
 Done when: a note written on the Mac is on the iPhone at once, and the server cannot read it.
 
@@ -83,6 +87,30 @@ Done when: a note written on the Mac is on the iPhone at once, and the server ca
 - **Payments:** Knode Cloud subscription, personal and per team.
 
 Done when: two people edit one space, each from their own device.
+
+## v0.6 - Capture life
+
+Sources that bring meetings, calendar, messages and personal media into a space, on the device
+(decisions [0010](decisions/0010-sources-and-plugins.md) and
+[0011](decisions/0011-meetings-on-the-device.md)).
+
+- **Sources:** one interface for importers and connectors, switched on per space in Settings >
+  Sources ([knode#226](https://github.com/knodemd/knode/issues/226)).
+- **Calendar:** events through EventKit, linked to the notes and meetings they belong to ([knode#227](https://github.com/knodemd/knode/issues/227)).
+- **Meetings:** recorded on the device with a visible indicator and consent per meeting
+  ([knode#228](https://github.com/knodemd/knode/issues/228)), transcribed on the device ([knode#229](https://github.com/knodemd/knode/issues/229)) and summarised on the device into a linked note
+  with decisions and action items ([knode#230](https://github.com/knodemd/knode/issues/230)).
+- **Voice Memos and iMessage:** new memos and chosen conversations brought in as they happen
+  ([knode#231](https://github.com/knodemd/knode/issues/231), [knode#232](https://github.com/knodemd/knode/issues/232)).
+- **Personal media:** photos, videos and audio added to a space with the original kept
+  ([knode#236](https://github.com/knodemd/knode/issues/236)), audio and video transcribed ([knode#237](https://github.com/knodemd/knode/issues/237)), photos read with OCR and on-device labels,
+  with date and place as properties ([knode#238](https://github.com/knodemd/knode/issues/238)), and the Photos library for chosen albums
+  ([knode#239](https://github.com/knodemd/knode/issues/239)).
+- **Storage:** a storage view per space and limits for large files, counted in sync and Knode
+  Cloud ([knode#241](https://github.com/knodemd/knode/issues/241)).
+
+Done when: a meeting, a voice memo and a whiteboard photo are found by what was said or written
+in them, and nothing left the device.
 
 ## v0.9 - Public beta
 
@@ -104,6 +132,8 @@ Done when: anyone installs it, connects their agents and starts in five minutes.
 ## After v1.0
 
 - **Plugins:** an API in the core, run in WebAssembly and sandboxed, with `plugin-template` and a
-  `plugins` registry.
+  `plugins` registry. Plugins implement the same source interface as built-in sources.
+- **Live connectors as plugins:** Gmail and Slack ([knode#233](https://github.com/knodemd/knode/issues/233)), a browser highlights extension
+  ([knode#234](https://github.com/knodemd/knode/issues/234)), and podcast and video transcripts ([knode#235](https://github.com/knodemd/knode/issues/235)).
 - **Integrations:** Raycast, Obsidian, VS Code.
 - **Platforms:** Android and Windows, native on the same core.

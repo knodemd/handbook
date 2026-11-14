@@ -14,3 +14,5 @@ One file per important decision: `NNNN-short-title.md`, with **Context**, **Deci
 | [0007](0007-distribution.md) | How Knode is installed | Accepted |
 | [0008](0008-permissions.md) | Permissions per agent and per space, with agent keys | Accepted |
 | [0009](0009-projects.md) | Projects, and how an import becomes one | Proposed |
+| [0010](0010-sources-and-plugins.md) | Sources and plugins: one interface, switched on per space | Proposed |
+| [0011](0011-meetings-on-the-device.md) | Meetings and media on the device (amends 0004) | Proposed |
