@@ -8,8 +8,8 @@ Importing a real Obsidian vault (about 190 git repositories, 35,000 files) with 
 onboarding made one flat list of 3,035 notes: more than half were copies from git worktrees and
 submodules, one folder of 30 repositories became a single project, every note showed the time of
 the import, 228 notes were all called `README`, and "projects" were generated notes with
-placeholders that nothing in the app or MCP could list. A bare `[[Estado]]` resolved to whichever
-of 21 `Estado` notes was oldest, inventing links between unrelated projects. Neither the person
+placeholders that nothing in the app or MCP could list. A bare link to a name that 21 notes
+shared resolved to whichever was oldest, inventing links between unrelated projects. Neither the person
 nor their agents could find their way around it.
 
 ## Decision
@@ -19,6 +19,11 @@ nor their agents could find their way around it.
   or schema version: kinds and typed links already exist. The core lists projects
   (`Space::projects`, `Space::project_notes`), Knode Service serves them, and MCP has a
   `projects` tool so agents go to a project's notes without searching.
+- **A project folder is where a project's files live.** A folder of kind `project` in a space
+  (format section 15.2), such as a code repository, holds the files of the `project` node of the
+  same name: adding one creates that node, or links to it when the space already has one. The
+  folder says where conversations are captured from; the node is what notes and agents belong
+  to. "Add a project" in the apps means adding its folder this way (knode#242).
 - **The onboarding finds projects in folders, deterministically.** Repositories are recognised
   by their `.git` folder; worktrees and submodules (a `.git` file) are other checkouts and stay
   out; a top-level folder with repositories in two or more subfolders is a group of projects.
