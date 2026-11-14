@@ -2,6 +2,8 @@
 
 **Status:** accepted, 2026-10-19
 
+**Amended by:** [0011](0011-meetings-on-the-device.md), on-device models that turn raw sources into notes.
+
 ## Context
 
 Everything you work out with an AI agent is scattered across chats and tools, and some agents delete
