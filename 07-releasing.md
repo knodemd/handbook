@@ -73,8 +73,25 @@ Pushing a tag runs `.github/workflows/release.yml` in the `knode` repository:
 The release stays a **draft** until a maintainer has checked it and publishes it by hand. Nothing is
 published automatically.
 
-The Mac app joins the workflow when it ships: the app is archived with Xcode, signed, notarised,
-stapled and attached as `Knode-X.Y.Z.dmg`, with its checksum in `SHA256SUMS`.
+The Mac job uses macOS 26 and checks out the brand submodule. Its first step checks that all six
+signing and notarisation secrets below are set, naming any that are missing, and fails the Mac job
+instead of preparing an unsigned Mac release. The Linux jobs do not depend on it and still build,
+but no draft release is created until the Mac job passes. Each secret is passed only to the steps
+that use it, and no secret value is printed.
+
+The same job builds a universal Release app with Xcode, sets its marketing version from the tag
+and its build number from the workflow run, and embeds the `knode` command. The app and the embedded
+command are signed with Developer ID, the hardened runtime and a secure timestamp, and the job
+checks all three before it notarises and staples the app and checks it with Gatekeeper. `mac/scripts/package-app.sh` verifies the app and
+helper versions, both architectures, Developer ID signature and stapled ticket, then creates
+`Knode-X.Y.Z.dmg` with an Applications link, LICENSE and NOTICE. The workflow signs, notarises and
+staples the DMG too, and computes the checksum **after** its final modification. The image and its
+`.sha256` are attached to the draft, and `SHA256SUMS` covers every archive and the DMG.
+
+The local `--allow-adhoc` packaging check is described in the product's `mac/README.md`. It does
+not install or launch the app and never runs in the public release workflow. The Developer ID,
+notarisation and Gatekeeper steps still need checking with the project's real credentials before
+the first release can be published.
 
 ## Signing and notarisation
 
@@ -99,11 +116,12 @@ repository, an issue or a log ([chapter 4](04-building-in-public.md)):
 | `APPLE_API_KEY_ID` | The key's id |
 | `APPLE_API_ISSUER_ID` | The issuer id of the App Store Connect team |
 
-When the certificate secrets are missing, the workflow still builds and packages, skips signing and
-notarisation, and warns about it. Forks and test tags work this way; a real release never ships
-unsigned Mac builds.
+There is no unsigned Mac path: when any of these secrets is missing, the Mac job fails with a
+message naming it, so no draft release is created. Set all six before pushing the first release
+tag.
 
-The workflow imports the certificate into a temporary keychain that is deleted at the end of the job.
+The workflow imports the certificate into a temporary keychain. A final step, which runs even when
+an earlier one fails, deletes the keychain and any certificate or key file written during the job.
 If a certificate or key leaks, revoke it at Apple first, then replace the secret.
 
 ## Homebrew
