@@ -38,6 +38,11 @@ still not enough to do the job well.
 - **The deterministic parts stay in the core.** Analysis, exclusions (generated folders, other
   checkouts, credentials), import, receipts and archive are the same commands the app uses. The
   agent only decides what needs judgment, through the editable plan.
+- **One guide for every starting point.** The agent first asks where the person starts: a folder
+  of notes or a vault; projects spread over several folders next to unrelated files; or nothing
+  yet, where it creates the space, registers the project folders and writes a short context note
+  per project from its repository. Until onboarding takes several folders natively (knode#219),
+  projects in several places are gathered as a working copy of their notes, never moved.
 - **Plug and play over configuration.** One prompt, no setup: the guide tells the agent which
   commands to run, what to ask and when to stop. The person approves one summary and the changes
   to their agents and instruction files.
