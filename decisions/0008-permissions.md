@@ -49,7 +49,7 @@ sections 16 and 17.
 - Grants are not a sandbox. A program running as the person can read a package directly or run
   the `knode` CLI, which acts for the person. Grants keep each agent to the spaces it was given
   and make what it did traceable; keeping programs away from files is the operating system's
-  job, and encryption (v0.4) protects packages at rest.
+  job, and encryption (v0.5) protects packages at rest.
 - Agents connected in v0.1 stop working until they are reconnected with a key. The upgrade offer
   keeps that to one confirmation.
 - Every space carries the fingerprints of the agents that have had access to it. They reveal
