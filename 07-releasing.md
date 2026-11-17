@@ -84,7 +84,7 @@ only and no Mac file at all. Its title ends in "(Linux only, do not publish)" an
 with the same warning. Once the secrets are set, **Re-run failed jobs** on that workflow run: the
 Mac job runs again and the same draft gets the Mac builds, a new `SHA256SUMS` and its normal title.
 Its notes are kept as they are, edits made by hand in the draft included; only the Linux-only
-warning is removed. A release that is already published is never changed. If a Linux-only draft is
+warning is removed. The workflow never changes a published release. If a Linux-only draft is
 published anyway, the Homebrew update refuses it: both `homebrew.yml` in `knode` and the tap's
 `bump` workflow stop with an error naming the missing Mac archives. To recover, turn the release
 back into a draft with `gh release edit vX.Y.Z --draft=true`, set the secrets, **Re-run failed
