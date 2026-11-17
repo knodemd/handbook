@@ -62,8 +62,11 @@ Pushing a tag runs `.github/workflows/release.yml` in the `knode` repository:
    | `universal-apple-darwin` | both Mac builds joined with `lipo` | `knode-vX.Y.Z-universal-apple-darwin.tar.gz` |
    | `x86_64-unknown-linux-gnu` | Ubuntu 22.04, x86_64 | `knode-vX.Y.Z-x86_64-unknown-linux-gnu.tar.gz` |
    | `aarch64-unknown-linux-gnu` | Ubuntu 22.04, arm64 | `knode-vX.Y.Z-aarch64-unknown-linux-gnu.tar.gz` |
+   | `x86_64-unknown-linux-musl` | Ubuntu 24.04, x86_64, static | `knode-vX.Y.Z-x86_64-unknown-linux-musl.tar.gz` |
+   | `aarch64-unknown-linux-musl` | Ubuntu 24.04, arm64, static | `knode-vX.Y.Z-aarch64-unknown-linux-musl.tar.gz` |
 
-   Linux builds run on the oldest supported Ubuntu so the binary works with older versions of glibc.
+   The glibc builds run on the oldest supported Ubuntu so the binary works with older versions of
+   glibc. The static musl builds are for musl systems such as Alpine and for older glibc.
 3. **Sign and notarise** the Mac binaries (see below).
 4. **Package** each binary with `LICENSE`, `NOTICE` and `README.md` as a `.tar.gz`, with a `.sha256`
    file next to it.
@@ -75,9 +78,20 @@ published automatically.
 
 The Mac job uses macOS 26 and checks out the brand submodule. Its first step checks that all six
 signing and notarisation secrets below are set, naming any that are missing, and fails the Mac job
-instead of preparing an unsigned Mac release. The Linux jobs do not depend on it and still build,
-but no draft release is created until the Mac job passes. Each secret is passed only to the steps
-that use it, and no secret value is printed.
+instead of preparing an unsigned Mac release. The Linux jobs do not depend on it: when every Linux
+build passes and the Mac job does not, the draft release is still created, with the Linux archives
+only and no Mac file at all. Its title ends in "(Linux only, do not publish)" and its notes start
+with the same warning. Once the secrets are set, **Re-run failed jobs** on that workflow run: the
+Mac job runs again and the same draft gets the Mac builds, a new `SHA256SUMS` and its normal title.
+Its notes are kept as they are, edits made by hand in the draft included; only the Linux-only
+warning is removed. The workflow never changes a published release. If a Linux-only draft is
+published anyway, the Homebrew update refuses it: both `homebrew.yml` in `knode` and the tap's
+`bump` workflow stop with an error naming the missing Mac archives. To recover, turn the release
+back into a draft with `gh release edit vX.Y.Z --draft=true`, set the secrets, **Re-run failed
+jobs** on the release workflow run of that tag, and publish the draft again, which runs the
+Homebrew update. GitHub re-runs a workflow run only within 30 days of it; after that, or if the
+release should not be withdrawn, release a new patch version instead. Each secret is passed only to
+the steps that use it, and no secret value is printed.
 
 The same job builds a universal Release app with Xcode, sets its marketing version from the tag
 and its build number from the workflow run, and embeds the `knode` command. The app and the embedded
@@ -117,8 +131,8 @@ repository, an issue or a log ([chapter 4](04-building-in-public.md)):
 | `APPLE_API_ISSUER_ID` | The issuer id of the App Store Connect team |
 
 There is no unsigned Mac path: when any of these secrets is missing, the Mac job fails with a
-message naming it, so no draft release is created. Set all six before pushing the first release
-tag.
+message naming it, and the draft has the Linux builds only. Set all six before pushing the first
+release tag, or before re-running the failed jobs.
 
 The workflow imports the certificate into a temporary keychain. A final step, which runs even when
 an earlier one fails, deletes the keychain and any certificate or key file written during the job.
@@ -184,7 +198,8 @@ The release:
 
 - [ ] Annotated tag `vX.Y.Z` on the merged commit, pushed.
 - [ ] The release workflow passed and signed and notarised the Mac builds (no "not signed" warning).
-- [ ] The draft release has every archive, every `.sha256`, `SHA256SUMS` and the app's `.dmg`.
+- [ ] The draft release has every archive, every `.sha256`, `SHA256SUMS` and the app's `.dmg`, and
+      its title does not say "Linux only".
 - [ ] Download one archive, check it with `shasum -a 256 -c`, and run `knode --version`.
 - [ ] On a Mac, `spctl --assess` accepts the app, and the app opens without a warning.
 - [ ] Notes reviewed, then the release is published.
