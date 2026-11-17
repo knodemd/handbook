@@ -1,6 +1,6 @@
 # 0010 - Sources and plugins
 
-**Status:** proposed, 2026-11-14
+**Status:** proposed, 2026-11-14. Amended by [0013](0013-live-connectors.md): connectors in v0.4, Gmail and Slack built in.
 
 ## Context
 

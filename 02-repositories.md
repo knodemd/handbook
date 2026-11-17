@@ -13,7 +13,7 @@ Everything lives in the [`knodemd`](https://github.com/knodemd) organisation, an
 | [`knode`](https://github.com/knodemd/knode) | The product: Rust core, Mac, iPhone and web apps | Active |
 | [`format`](https://github.com/knodemd/format) | The `.knode` specification and example files | Active |
 | [`homebrew-tap`](https://github.com/knodemd/homebrew-tap) | `brew install knodemd/tap/knode` | Active |
-| `cloud` | Knode Cloud: sync, accounts, sharing, teams | Planned, v0.4 |
+| `cloud` | Knode Cloud: sync, accounts, sharing, teams | Planned, v0.5 |
 
 **Docs or handbook?** The docs explain how to use Knode, for anyone who installs it. The handbook
 explains how the project works, for anyone who builds it. A change in `knode` that users see comes
