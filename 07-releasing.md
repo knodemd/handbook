@@ -83,7 +83,9 @@ build passes and the Mac job does not, the draft release is still created, with 
 only and no Mac file at all. Its title ends in "(Linux only, do not publish)" and its notes start
 with the same warning. Once the secrets are set, **Re-run failed jobs** on that workflow run: the
 Mac job runs again and the same draft gets the Mac builds, a new `SHA256SUMS`, its normal title and
-notes. A release that is already published is never changed. Each secret is passed only to the
+notes. A release that is already published is never changed. If a Linux-only draft is published
+anyway, the Homebrew update refuses it: both `homebrew.yml` in `knode` and the tap's `bump`
+workflow stop with an error naming the missing Mac archives. Each secret is passed only to the
 steps that use it, and no secret value is printed.
 
 The same job builds a universal Release app with Xcode, sets its marketing version from the tag
