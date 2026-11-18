@@ -18,3 +18,5 @@ One file per important decision: `NNNN-short-title.md`, with **Context**, **Deci
 | [0011](0011-meetings-on-the-device.md) | Meetings and media on the device (amends 0004) | Proposed |
 | [0012](0012-agent-led-onboarding.md) | Onboarding is done by the person's agent first | Proposed |
 | [0013](0013-live-connectors.md) | Live connectors for chats and mail, in v0.4 (amends 0010) | Accepted |
+| [0014](0014-sync-cloud-and-remote-access.md) | Sync, Knode Cloud and remote access for agents (modes A and B) | Proposed |
+| [0015](0015-teams.md) | Teams: shared spaces, roles and admin | Proposed |
