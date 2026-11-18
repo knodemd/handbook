@@ -107,16 +107,22 @@ in them, and nothing left the device.
 
 - **Sync:** Loro updates between devices, never the database itself.
 - **iCloud:** free, through CloudKit, for Mac, iPhone and iPad.
-- **Knode Cloud:** a Rust server with accounts, sync and end-to-end encryption (`cloud`).
+- **Knode Cloud:** a Rust server with accounts, sync and end-to-end encryption (`cloud`)
+  ([decision 0014](decisions/0014-sync-cloud-and-remote-access.md)).
+- **Remote access for agents:** Claude on the phone, claude.ai and other remote agents use Knode
+  through a remote MCP connector: mode A asks the person's Mac through a relay that cannot read
+  anything; mode B, switched on per space, answers from Knode Cloud when every device is off.
 - **iPhone and iPad:** read, search and edit; save from the share sheet.
 - **In-person meetings:** record on the iPhone into a space, with the same consent rules as on the
   Mac ([knode#240](https://github.com/knodemd/knode/issues/240)).
 
-Done when: a note written on the Mac is on the iPhone at once, and the server cannot read it.
+Done when: a note written on the Mac is on the iPhone at once, the server cannot read it, and
+Claude on the phone finds it by asking.
 
 ## v0.6 - Collaboration and web
 
-- **Sharing:** read-only links, shared spaces and team spaces with roles.
+- **Sharing:** read-only links, shared spaces and team spaces with roles and admin
+  ([decision 0015](decisions/0015-teams.md)).
 - **Web app:** app.knode.md, with the core in WebAssembly and the same encryption.
 - **Payments:** Knode Cloud subscription, personal and per team.
 
