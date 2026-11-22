@@ -16,6 +16,7 @@ work, and how to use the brand. If something about the project isn't written her
 | 5 | [Brand](05-brand.md): how the brand works and where to find everything |
 | 6 | [Roadmap](06-roadmap.md): where we are and what comes next |
 | 7 | [Releasing](07-releasing.md): versions, the changelog, signing, and publishing a release |
+| 8 | [Service registrations](08-service-registrations.md): registering Knode with Google, Slack and Telegram, and where the values go |
 | | [Decisions](decisions/): the log of important decisions and why we made them |
 
 New here? Read chapters 1 and 3, then pick a `good first issue`.
