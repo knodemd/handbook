@@ -138,6 +138,31 @@ The workflow imports the certificate into a temporary keychain. A final step, wh
 an earlier one fails, deletes the keychain and any certificate or key file written during the job.
 If a certificate or key leaks, revoke it at Apple first, then replace the secret.
 
+## Service clients
+
+The Gmail, Telegram and Slack connectors sign in as Knode's own registered apps. Their client ids
+are embedded in release builds from **GitHub Actions secrets** on the `knode` repository; how to
+register each service and get the values is in [chapter 8](08-service-registrations.md).
+
+| Name | Kind | What it holds |
+|---|---|---|
+| `KNODE_GOOGLE_CLIENT_ID` | secret | The OAuth client id of the Google Cloud project's desktop client |
+| `KNODE_GOOGLE_CLIENT_SECRET` | secret | That client's secret (not confidential for a desktop client, but kept out of the repository) |
+| `KNODE_TELEGRAM_API_ID` | secret | Knode's Telegram `api_id` |
+| `KNODE_TELEGRAM_API_HASH` | secret | Knode's Telegram `api_hash` |
+| `KNODE_SLACK_CLIENT_ID` | secret | The client id of the Knode Slack app (no Slack secret is needed: PKCE) |
+| `KNODE_SLACK_LIMITS` | variable | `marketplace` once the Slack app is listed in the Marketplace; unset before |
+
+The workflow passes them to `cargo build` and `xcodebuild`, where the connectors read them with
+`option_env!`, then checks them with `scripts/check-service-clients.sh`, which never prints a
+value: before the build, that each is set and has the right shape; after it, that the binaries
+embed them. For a stable version a problem fails the job; for a pre-release it is a warning, so
+a beta can ship before every service is registered. A connector without its client still works
+when the person sets the variable when Knode Service starts.
+
+Developer builds take the same names from `core/.env.services`, a copy of
+`core/.env.services.example` that git ignores; the Mac build scripts load it.
+
 ## Homebrew
 
 `knodemd/homebrew-tap` holds two files, both pointing at the release assets:
@@ -193,6 +218,7 @@ Before the tag:
 - [ ] `main` is green: the core checks and the app build pass.
 - [ ] `CHANGELOG.md` has a section for the version, written for people.
 - [ ] The version is set in `core/Cargo.toml` and `core/Cargo.lock`, merged through a pull request.
+- [ ] For a stable version, the five service-client secrets are set ([Service clients](#service-clients)).
 
 The release:
 
