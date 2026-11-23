@@ -18,3 +18,4 @@ One file per important decision: `NNNN-short-title.md`, with **Context**, **Deci
 | [0011](0011-meetings-on-the-device.md) | Meetings and media on the device (amends 0004) | Proposed |
 | [0012](0012-agent-led-onboarding.md) | Onboarding is done by the person's agent first | Proposed |
 | [0013](0013-live-connectors.md) | Live connectors for chats and mail, in v0.4 (amends 0010) | Accepted |
+| [0017](0017-organising-spaces.md) | How a person organises their spaces: one per audience, projects inside | Proposed |
