@@ -49,13 +49,32 @@ projects made with other people outside both. Splitting it was tempting, but wit
 - **Onboarding suggests one space** and asks about other spaces only when the person says a project
   is shared or private (#50, #187).
 
+### Working across spaces
+
+A person with a personal space and team spaces must still be able to ask, from a personal project,
+about the team's work. So:
+
+- **Read wide.** An agent searches every space it may read, ranked together, and every result names
+  its space (#398). Asking about the team from a personal project works because the person, and so
+  their agent, is a member of the team space.
+- **Write narrow.** What an agent saves goes to one space: the space of the project folder it works
+  in, or the one it is told. Team facts do not land in a personal space, nor personal notes in a team
+  space.
+- **Access is one way.** A person's agents can read their team spaces; teammates' agents never read
+  that person's spaces. Each space grants its own readers (0008, 0015).
+- **Where a note goes:** facts and decisions about the team's work go to the team space; a person's
+  own view of it goes to their space, with a reference to the team's note.
+- **References between spaces** (#403) resolve only for a reader of both spaces. For anyone else they
+  show the author's text alone, never the target's title or that it exists.
+
 ## Consequences
 
 - Until #398 lands, a second space costs context: its agents cannot read the person's other spaces,
   and notes saved through MCP go to the default space whatever the folder. Docs say so where they
   explain spaces.
 - With #398, an agent reads every space it is granted and writes to the space of its working folder,
-  so splitting by audience no longer loses context.
+  so splitting by audience no longer loses context. Until #403, a note in one space can only name a
+  note in another in plain text.
 - The docs get a page, "Organise your memory", with this rule and examples (one person, a freelancer
   with clients, a team).
 - Moving a project between spaces with its notes, links and history is needed when a group of
